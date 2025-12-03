@@ -2,6 +2,9 @@ from flask import Flask, render_template, request, redirect, url_for, session, f
 import mysql.connector
 from datetime import datetime
 import os  # Added for environment variables
+from dotenv import load_dotenv
+load_dotenv()  # Ye .env file ko read karega
+
 
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY", "secret123")  # Secret key from env

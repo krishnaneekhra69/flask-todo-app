@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h2>Edit Todo</h2>
+
+  <form method="POST" action="{{ url_for('edit', todo_id=todo['id']) }}">
+    
+    <label>Title</label>
+    <input name="title" value="{{ todo['title'] }}" required>
+
+    <label>Description</label>
+    <textarea name="description">{{ todo['description'] }}</textarea>
+
+    <label>
+      <input type="checkbox" name="done" {% if todo['done'] == 1 %}checked{% endif %}>
+      Mark as done
+    </label>
+
+    <div class="actions">
+      <button class="btn" type="submit">Save</button>
+      <a class="btn ghost" href="{{ url_for('index') }}">Cancel</a>
+    </div>
+
+  </form>
+</div>
+{% endblock %}

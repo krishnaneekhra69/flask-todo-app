@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h2>Add Todo</h2>
+  <form method="POST" action="{{ url_for('add') }}">
+    <label>Title</label>
+    <input name="title" placeholder="Title" required>
+    <label>Description</label>
+    <textarea name="description" placeholder="Optional description"></textarea>
+    <div class="actions">
+      <button class="btn" type="submit">Add</button>
+      <a class="btn ghost" href="{{ url_for('index') }}">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

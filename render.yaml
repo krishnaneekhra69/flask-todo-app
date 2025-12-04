@@ -7,12 +7,13 @@ services:
     startCommand: gunicorn app:app
     envVars:
       - key: DB_HOST
-        value: <RENDER_MYSQL_HOST>       # Render MySQL plugin host
+        value: 37efb4c328657936fc14d41bc56a14a8
       - key: DB_USER
-        value: <RENDER_MYSQL_USER>       # Render MySQL username
+        value: 74d6347eebbe37b7b0b875d777568fca
       - key: DB_PASSWORD
-        value: <RENDER_MYSQL_PASSWORD>   # Render MySQL password
+        value: 78e5594059010e7a585c16119bdcc96c
       - key: DB_NAME
-        value: <RENDER_MYSQL_DATABASE>   # Render MySQL database name
+        value: d61ffdf791762896553ba6f85dcb6859
       - key: SECRET_KEY
         value: mysecretkey123
+

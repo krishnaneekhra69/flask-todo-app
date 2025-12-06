@@ -2,9 +2,7 @@
 {% block content %}
 <div class="container">
   <h2>Edit Todo</h2>
-
   <form method="POST" action="{{ url_for('edit', todo_id=todo['id']) }}">
-    
     <label>Title</label>
     <input name="title" value="{{ todo['title'] }}" required>
 
@@ -20,7 +18,6 @@
       <button class="btn" type="submit">Save</button>
       <a class="btn ghost" href="{{ url_for('index') }}">Cancel</a>
     </div>
-
   </form>
 </div>
 {% endblock %}
